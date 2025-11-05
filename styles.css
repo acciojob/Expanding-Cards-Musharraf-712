@@ -1,1 +1,63 @@
 /*  your css code here. If applicable */
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #222;
+    }
+
+    .container {
+      display: flex;
+      width: 90vw;
+    }
+
+    .panel {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 80vh;
+      border-radius: 50px;
+      color: white;
+      flex: 0.5;
+      margin: 10px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.7s ease-in;
+    }
+
+    .panel .img-text {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      font-size: 24px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+    }
+
+    .panel.active {
+      flex: 5;
+    }
+
+    .panel.active .img-text {
+      opacity: 1;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 100vw;
+      }
+      .panel {
+        margin: 5px;
+      }
+      .panel .img-text {
+        font-size: 18px;
+      }
+    }
